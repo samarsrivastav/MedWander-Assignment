@@ -1,19 +1,19 @@
-import mongoose, {Schema} from "mongoose";
-interface ComplaintInterface{
-    title : string,
-    description:string,
-    category:string,
-    priority:string,
+import mongoose, { Schema } from "mongoose";
+interface ComplaintInterface {
+    title: string,
+    description: string,
+    category: string,
+    priority: string,
     status: string,
-    dateSubmitted : Date
+    dateSubmitted: Date
 }
-const ComplaintModel:Schema= new Schema({
-    title : String,
-    description:String,
-    category:String,
-    priority:String,
+const ComplaintModel: Schema = new Schema({
+    title: String,
+    description: String,
+    category: String,
+    priority: String,
     status: String,
-    dateSubmitted : Date
+    dateSubmitted: Date
 })
-const complaint=mongoose.model<ComplaintInterface>('complaintModel',ComplaintModel)
+const complaint = mongoose.model<ComplaintInterface>('complaintModel', ComplaintModel)
 export default complaint
