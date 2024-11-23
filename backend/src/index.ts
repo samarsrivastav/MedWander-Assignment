@@ -1,10 +1,10 @@
 import connectDb from "./db/config";
 import express from 'express'
 import route from "./routes/route";
-
+import cors from 'cors'
 connectDb()
 const app = express()
-
+app.use(cors())
 app.use(express.json())
 app.use('/api', route)
 
