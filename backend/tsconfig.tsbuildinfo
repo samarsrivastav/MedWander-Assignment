@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/db/config.ts"],"version":"5.6.2"}
+{"root":["./src/index.ts","./src/controller/addcomplaint.ts","./src/controller/deletecomplaint.ts","./src/controller/readcomplaint.ts","./src/controller/updatecomplaint.ts","./src/db/config.ts","./src/model/complaint.ts","./src/routes/route.ts"],"version":"5.6.2"}
