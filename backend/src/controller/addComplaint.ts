@@ -4,8 +4,11 @@ import complaint from "../model/complaint";
 
 export const addComplaint = async (req: Request, res: Response) => {
     try {
-        const { title, description, category, priority, status } = req.body;
-
+        const { title, description, category, priority } = req.body;
+        let status="Pending"
+        if(req.body.status){
+            status=req.body.status
+        }
         const newComplaint = new complaint({
             title,
             description,
