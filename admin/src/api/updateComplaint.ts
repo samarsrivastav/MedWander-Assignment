@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const updateComplaint=async(id:string,status:string)=>{
-    const result=await axios.put("http://localhost:3000/api/complaint/update",{
+    const result=await axios.put("https://medwander-backend.vercel.app/api/complaint/update",{
         id,
         status
     })

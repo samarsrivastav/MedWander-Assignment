@@ -18,7 +18,7 @@ const ComplaintForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/complaint/add", {
+      const response = await fetch("https://medwander-backend.vercel.app/api/complaint/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

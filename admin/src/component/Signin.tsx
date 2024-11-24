@@ -29,7 +29,7 @@ const SignIn = () => {
     setError(null);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/signin", {
+      const response = await axios.post("https://medwander-backend.vercel.app/api/auth/signin", {
         username,
         password,
       });

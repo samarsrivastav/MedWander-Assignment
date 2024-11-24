@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const deleteComplaint=async(id:string)=>{
-    const result=await axios.delete("http://localhost:3000/api/complaint/delete",{
+    const result=await axios.delete("https://medwander-backend.vercel.app/api/complaint/delete",{
         data:{id}
     })
     return result
