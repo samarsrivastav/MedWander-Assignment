@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SignIn from './component/signin';
 import { Home } from './component/Home';
 import { SignUp } from './component/Signup';
+import { SignIn } from './component/Signin';
 
 const App = () => {
   const [auth,setAuth]=useState(Boolean)
