@@ -1,6 +1,6 @@
 import connectDb from "./db/config";
 import express from 'express'
-import route from "./routes/route";
+import route from "./routes/api";
 import cors from 'cors'
 connectDb()
 const app = express()
