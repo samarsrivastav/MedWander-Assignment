@@ -1,17 +1,30 @@
+import { useEffect, useState } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignIn from './component/signin';
+import { Home } from './component/Home';
+import { SignUp } from './component/Signup';
 
-import './App.css'
-import ComplaintForm from './component/Form'
-
-function App() {
-
+const App = () => {
+  const [auth,setAuth]=useState(Boolean)
+  useEffect(()=>{
+    setAuth(localStorage.getItem('token') !== null)
+  },[])
+  console.log(auth)
   return (
-    <div className=" h-screen p-5">
-      <div className="title text-center text-3xl text-[rgb(113,113,122)] font-bold my-5">
-        Register Your <span className='text-[rgb(22,173,204)]'>Complaint</span>
-      </div>
-      <ComplaintForm/>
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/signin" element={auth ? <Home /> : <SignIn />} />
+        <Route path="/signup" element={auth ? <Home /> : <SignUp />} />
+        <Route path="/" element={auth ? (
+          <Home/>
+        ) : (
+          <SignIn />
+        )} />
 
-export default App
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
