@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
-import complaint from "../model/complaint";
+import complaint from "../../model/complaint";
 
 export const addComplaint = async (req: Request, res: Response) => {
     try {

@@ -124,7 +124,7 @@ const ComplaintForm: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-[rgb(113,113,122)] text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[rgb(22,173,204)]"
+          className="w-full bg-[rgb(22,173,204)] text-white font-medium py-2 px-4 rounded-lg"
         >
           Submit
         </button>

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import complaint from "../model/complaint";
+import complaint from "../../model/complaint";
 export const deleteComplaint = async (req: Request, res: Response) => {
     try {
         const id = req.body.id
